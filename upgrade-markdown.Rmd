@@ -1,0 +1,40 @@
+---
+title: "My Fancy RMD"
+subtitle : "Changes in YAML"
+author: "Desik Somasundaram"
+output: 
+  html_document:
+    theme: sandstone
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My First Chapter
+
+### Preface
+
+#### Cool Stuff
+
+```{r}
+a <- 10
+b <- 23
+
+bison <- a + b
+
+```
+
+## My Second chapter
+
+### A note on something
+
+```{r}
+
+mean(mtcars$mpg)
+
+
+```
+
