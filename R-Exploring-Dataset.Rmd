@@ -19,12 +19,40 @@ library(palmerpenguins)
 
 ```{r}
 
+# Names of variables
+names(penguins)
+
 # Dimensions
 dim(penguins)
 
 
 # Overall summary of the data
 summary(penguins)
+
+# Look at the first few lines
+head(penguins)
+
+# Look at the last few lines
+
+tail(penguins)
+
+# Use GGally::ggpairs()
+
+GGally::ggpairs(penguins)
+
+# Use skimr::skim()
+skimr::skim(penguins)
+
+# Histogram of flipper lengths
+ggplot(data = penguins, aes(x = flipper_length_mm)) +
+  geom_histogram() +
+  facet_wrap(~species)
+
+
+# Make a faceted histogram of penguin bill_length_mm, faceted by island
+ggplot(data = penguins, aes(x = bill_length_mm)) +
+  geom_histogram() +
+  facet_wrap(~island)
 
 ```
 
